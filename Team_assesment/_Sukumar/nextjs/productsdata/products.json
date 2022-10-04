@@ -1,0 +1,83 @@
+[
+    {
+        "image": "p1.png",
+        "itemName": "Sprite",
+        "category": "Beverages",
+        "quantity": 30,
+        "price": 80,
+        "id":1
+
+    },
+    {
+        "image": "p2.png",
+        "itemName": "Burger",
+        "category": "Food",
+        "quantity": 100,
+        "price": 120,
+        "id":2
+
+    },
+    {
+        "image": "p3.jpg",
+        "itemName": "Donuts",
+        "category": "Bakery",
+        "quantity": 200,
+        "price": 100,
+        "id":3
+
+    },
+    {
+        "image": "p4.jpg",
+        "itemName": "Pizza",
+        "category": "Eatery",
+        "quantity": 50,
+        "price": 150,
+        "id":4
+
+    },
+    {
+        "image": "p9.jpg",
+        "itemName": "Chicken Biryani",
+        "category": "Food",
+        "quantity": 180,
+        "price": 220,
+        "id":5
+
+    },
+    {
+        "image": "p5.jpg",
+        "itemName": "Sushi",
+        "category": "Dine",
+        "quantity": 20,
+        "price": 350,
+        "id":6
+
+    },
+    {
+        "image": "p6.jpg",
+        "itemName": "Combo Movie Meal",
+        "category": "Food",
+        "quantity": 10,
+        "price": 350,
+        "id":7
+
+    },
+    {
+        "image": "p7.jpg",
+        "itemName": "Veg Italia",
+        "category": "Food",
+        "quantity": 15,
+        "price": 150,
+        "id":8
+
+    },
+    {
+        "image": "p8.png",
+        "itemName": "Cup Icecream",
+        "category": "Food",
+        "quantity": 70,
+        "price": 49,
+        "id":9
+
+    }
+]

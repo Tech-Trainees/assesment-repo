@@ -1,0 +1,175 @@
+.img{
+   position: absolute;
+   top:100px;
+
+   width: 1900px;
+   height:1000px;
+  }
+  .me{
+    position: absolute;
+    top:5px;
+    left:1668px;
+    width: 122px;
+    height:124px;
+  }
+  .img2{
+    position: absolute;
+    top:202px;
+    left:470px;
+  }
+  .element {
+    position: relative;
+    top:330px;
+    left:547px;
+    height: 400px;
+    width: 465px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: red;
+    animation-name: stretch;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  
+  @keyframes stretch {
+    100% {
+      transform: scale(.3);
+      background-color: red;
+      border-radius: 100%;
+    }
+    50% {
+      background-color: orange;
+    }
+    0% {
+      transform: scale(1.5);
+      background-color: yellow;
+    }
+  }
+  .brand{
+    position: relative;
+    top:-40px;
+    margin-left:100px ;
+    font-size: 50px;
+  }
+  .toc{
+    position: relative;
+    animation-name: bounce;
+    top:-50px;
+    margin-left:100px;
+    color:rgb(13, 235, 161);
+    font-size: 50px;
+  }
+  .means{
+    position: relative;
+    top:-78px;
+    margin-left:100px;
+    color:darkturquoise;
+    font-size: 50px;
+  }
+  .heart {
+    width: 1000px;
+    height: 100px;
+    position: absolute;
+    left: 18%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    animation: fave-heart 1s steps(28);
+  }
+  .heart:hover {
+    background-position: -2800px 0;
+    transition: background 1s steps(28);
+  }
+  @keyframes fave-heart {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -2800px 0;
+    }
+  }
+  .ani{
+    position: absolute;
+    top:1798px;
+    left:1px;
+    width:1900px;
+    height:800px;
+    background-color: darkcyan;
+  }
+  .coffee{
+    position: absolute;
+    top:1000px;
+    left:1px;
+    width:1900px;
+    height:800px;
+  }
+  .Brave{
+    position: absolute;
+    top:1170px;
+    left: 1062px;
+    width: 537px;
+    height: 459px;
+    opacity: 0.5;
+  }
+  .background{
+    position: absolute;
+    top:1000px;
+    width: 1900px;
+    height:800px;
+    background-color: rosybrown;
+  }
+  .background:hover{
+    top:1000px;
+    width: 1900px;
+    height:800px;
+    background-color: rgb(25, 193, 231);
+    transition: transform 5s;
+  }
+  .back_white{
+    position: absolute;
+    top:1109px;
+    left:100px;
+    width: 1634px;
+    height:600px;
+    background-color:white;
+  }
+  .back_gray{
+    position: absolute;
+    top:1109px;
+    left:100px;
+    width: 834px;
+    height:600px;
+    background-color: lightslategray;
+  }
+  .black_coffee{
+    position: absolute;
+    top:1426px;
+    left:1100px;
+  }
+  .black_coffee_p{
+    position: absolute;
+    top:1488px;
+    left:1100px;
+  }
+  .btn{
+    position: absolute;
+    top:1565px;
+    left:1100px;
+    width:347px;
+    height:57px;
+    text-align: center;
+    color:Blue;
+    background-color: lightsalmon;
+  }
+  .btn:hover{
+    position: absolute;
+    color:aqua;
+    background-color:palevioletred;
+  }

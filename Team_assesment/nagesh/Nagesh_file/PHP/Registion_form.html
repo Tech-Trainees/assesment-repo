@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+            .form{
+                background-color: aqua;
+                width:500px;
+                height:645px;
+                margin-top: 100px;
+              
+            }
+           
+            .firstname{
+                width:200px;
+                height:40px;
+                margin-left:60px;
+            }
+            .lastName{
+                width:200px;
+                height:40px;
+                margin-left:60px;
+            }
+            .Gmail{
+                width:200px;
+                height:40px;
+                margin-left:90px;
+            }
+            .number{
+                width:200px;
+                height:40px;
+                margin-left:40px;
+            }
+            .Address{
+                width:200px;
+                height:100px;
+                margin-left:80px;
+            }
+            .city{
+                width:200px;
+                height:40px;
+                margin-left:100px;
+            }
+           .sign_in{
+            margin-top: 71px ;
+            margin-left: -30px;
+            width: 118px;
+            height: 36px;
+            cursor: pointer;
+            background-color: cadetblue;
+            color: azure;
+            text-decoration: none;
+           }
+           .sign_in:hover{
+            background-color: rgb(33, 190, 237);
+           }
+         
+         
+.checkbox{
+    margin-top: 20px;
+    margin-left: 0px;
+}
+        </style>
+        
+    </head>
+        <body>
+            <div>
+                <center>
+                <form class="form ">
+                    <h1><u>Registion Form</u></h1>
+                    <label class="f_name">FirstName :</label>
+                    <input type="text" name="firstname" class="firstname" required placeholder="FirstName"/><br/><br/>
+                    <label class="l_name">LastName :</label>
+                    <input type="text" class='lastName' name="lastName"required placeholder="LastName"/><br/><br/>
+                    <label class="g_mail">Gmail :</label>
+                    <input type="text" class='Gmail'  name="gmail"required placeholder="@mail"/><br/><br/>
+                    <label class="p_number">Phonenumber :</label>
+                  <input type="phone"  name="number"  class="number" required placeholder="Enter your Number"/> <br/><br/>
+                  <label class="a_address">Address :</label>
+                  <input type="text" class='Address' name="address"required placeholder="Address"/><br/><br/>
+                  <label class="c_city"> City :</label>
+                  <input type="text" class="city" name="city" required placeholder="New York"><br/><br/>
+                    <input type="checkbox" class='checkbox'checked="checked" required name="sameadr"> I have read and agree to the terms of the condtion</input>
+                    <div>
+                    <button class="sign_in"><a  style="text-decoration: none;" href="./Login_page.html">sign in</a></button>
+                   
+                </div>
+                </form>
+
+            </center>
+            </div>
+        </body>
+   
+    </html>

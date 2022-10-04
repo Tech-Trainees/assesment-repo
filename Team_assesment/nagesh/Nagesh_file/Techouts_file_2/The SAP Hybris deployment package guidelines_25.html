@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The SAP Hybris deployment package guidelines</title>
+    <style>
+      body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 400;
+        }
+       .blog_post_title,h1 {
+          color: #0f77bd;
+          font-size: 35px;
+        font-weight: 500;
+        line-height: 1.138888889;
+        letter-spacing: -0.0415625em;
+       }
+       .post_date {
+    font-weight: 500;
+    font-size: 16px;
+    }
+    p{
+        line-height: 1.476;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    h3{
+        font-weight: 500;
+        letter-spacing: -0.0415625em;
+    line-height: 1.25;
+    font-size: 1.6em;
+    }
+    h5{
+        font-size: 2.4rem;
+        font-weight: 500;
+        letter-spacing: -0.0415625em;
+    line-height: 1.25;
+    }
+    h4{
+        font-weight: 500;
+        font-size: 1.5em;
+        letter-spacing: -0.0415625em;
+    line-height: 1.25;
+    }
+    h2{
+        font-weight: 500;
+        font-size: 2.1em;
+    }
+    strong {
+    font-weight: 700;
+    }
+    li{
+        line-height: 1.476;
+        font-weight: 400;
+    }
+      </style>
+</head>
+<body>
+    <div class="entry-header-inner">
+        <h1 class="blog_post_title">The SAP Hybris deployment package guidelines</h1>
+        <span class="post_date">12/21/2020</span>
+    </div>
+    <div class="post-inner">
+        <div class="entry-content">
+            <p>Deployment packages are utilized by the HCS (Hybris Commerce Suite) Platform DevOps teams to deploy the customer-specific code and configurations into the production environments and client’s staging.</p>
+<p>The deployment package should be structured properly as it is an essential step for a correct and successful deployment process, especially automated deployments. The main items that need to be provided for a deployment performed by HCS are</p>
+<h3>SAP Hybris Deployment Package:</h3>
+<ul>
+<li>Platform and extension zip-files</li>
+<li>Configuration files</li>
+<li>Optional additional files and configurations</li>
+</ul>
+<h3>SAP Hybris Deployment Request Form:</h3>
+<p>Artifacts should be provided quickly when a deployment is required. Prior to the deployment, HCS will review the documents. So they are supposed to be attached to the corresponding ticket. If any issue is identified in the provided information, HCS will contact the requester to discuss and resolve before the actual change window for the deployment starts.</p>
+<p>The SAP Hybris Deployment Request Form is used to specify further details about the deployment, for example, if a database change as initialization or an update procedure is required. Additional instructions, which are not part of the standard deployment procedure, must also be included in the SAP Hybris Deployment Request Form.</p>
+<h3>Package naming:</h3>
+<p>Deployment packages should be named properly. The requirements for the Naming scheme HCS deployment package are as mentioned below:</p>
+<ul>
+<li>The application release in order to easily identify each of them along with their sequence must be included in the build version.</li>
+<li>The HCS deployment package must be uniquely identified by the name.</li>
+<li>Consistent and logical sequence should be followed by names so that they are sortable and reflect the order by which deployment packages are released.</li>
+<li>Major version and, if available, minor version information should be included in the package names.</li>
+<li>In package names, dates should not be included. Date information is preferred if dates are included in the package name, limit to including the year before the version number.</li>
+<li>A short identification string of the project name and customer should be added to the package name. This information is provided at the beginning of a project by HCS.</li>
+</ul>
+<h3>Production vs. non-production packages:</h3>
+<p>Before production, deployment packages are deployed in Staging. They are promoted to production once they complete proper testing.</p>
+<p>The packages which have not been deployed previously or tested successfully in staging are not permitted into production deployment.</p>
+<p>For example: With no prior intention to promote a release into Production, a release can be deployed in Staging. A clear example of this is if you want to utilize the Staging environment for debugging purposes which cannot be done in the Development phase</p>
+<p>For the above reason there is a distinction made between the packages which are intended to be deployed in Production and also packages which are not intended for Production use:</p>
+<ul>
+<li>A package may contain contents along with the configuration files which are specific only to the target environment even if the package is not intended for production.</li>
+<li>Configuration and content files for both production and staging should be involved in the package intended for production.</li>
+<li>The packages which do not contain contents and configuration files for staging cannot be deployed in production.</li>
+</ul>
+<h3>Package structure</h3>
+<h5>Zip-package:</h5>
+<p>Every deployment package must have a new zip archive folder and it should be placed in /NFS_DATA/deployment on the DEV environment to contain the package files. The package naming must match the zip-file schema outlined by matching build version etc. Additionally, spaces and special characters must be replaced with “_”. For each package, an associated MD5 checksum file must also be provided.</p>
+<h5>MD5 checksum:</h5>
+<p>During the deployment procedure, a checksum file is used to test the integrity of the package. Checksum file should contain the MD5 hash of the zipped package. On a Linux or OSX machine, the commands mentioned below can be used</p>
+<h5>Directory tree:</h5>
+<ul>
+<li>The deployment package name should be the top-level directory, which in turn determines the name of the zip-file after compression.</li>
+<li>All application-related deployment files should be included in a subdirectory named hybris.</li>
+</ul>
+<p>Additional directories for other server types are included with the package structure for future expansion. For each environment, a configuration set has to be provided to deploy in more than one environment. Under the config subdirectory, each configuration set will be grouped under another directory, &lt;ENV&gt; named for the target environment. Just one set of binary files under the bin parent directory should be provided for deployment packages, regardless of the number of target environments.</p>
+<h3>Package contents</h3>
+<h5>Metadata:</h5>
+<p>The information required by the HCS automation platform is derived from metadata.properties file. The major and minor version of HCS Deployment Packaging Guidelines being followed should contain at present. This value is derived from the title of the document by omitting the version patch.</p>
+<h3>Properties of Metadata</h3>
+<h5>Platform and extensions zip-files:</h5>
+<p>By running the ant production command on the DEV environment, the Platform and Extensions zip-files are to be created. This will produce the two files in the /opt/hybris/temp/hybris/hybrisServer folder as follows:</p>
+<ul>
+<li>hybrisServer-Platform.zip</li>
+<li>hybrisServer-AllExtensions.zip</li>
+</ul>
+<p>The above two files are copied inside the bin folder within the deployment package.</p>
+<h5>Configuration files:</h5>
+<p>Following are the two configuration files that are mandatory for every HCS deployment package:</p>
+<ul>
+<li>localextensions.xml</li>
+</ul>
+<p>For SAP Hybris extensions, localextensions.xml is the standard configuration file. It is required for any of the customer-specific SAP Hybris application.</p>
+<ul>
+<li>customer.properties</li>
+</ul>
+<p>To construct the main SAP Hybris configuration file, local.properties, customer.properties file is used for the target environment during the deployment process. The local.properties file is created by combining the content of the customer.properties provided by the partner, with the information from another configuration file, hybris.properties, managed by HCS. The hybris.properties file contains server configuration settings managed by HCS and must not be changed by the HCS customer or partner.</p>
+<p>customer.properties file is created by removing all Development environment-specific settings and they are replaced with settings required by the target environments. Node and environment settings that are already included in hybris.properties should not be included in the settings. By error such a setting is included then that will be overwritten in the deployment process and will not be taken into effect.</p>
+<h3>Configuration per server role</h3>
+<p>Maintain distinct configurations between application servers depending on their role based on the project’s specific requirement. The partner needs to submit different sets of configurations applied to servers based on the role assigned. Only two roles are available currently:</p>
+<ul>
+<li>App for frontend application servers</li>
+<li>Adm for backend/admin application serve</li>
+</ul>
+<p>Using a specific schema, role assignment is embedded in the configuration filenames as follows:</p>
+<p>For .frontend.nodes:</p>
+<ul>
+<li>customer.app.properties</li>
+<li>localextensions.app.xml</li>
+</ul>
+<p>For .backend/admin.nodes:</p>
+<ul>
+<li>customer.adm.properties</li>
+<li>localextensions.adm.xml</li>
+</ul>
+<p>Mixing the two strategies is not allowed as the schemes are mutually exclusive.</p>
+<h3>Customize and languages folders</h3>
+<p>To add additional custom settings in some installations, the customize folder is used. This folder is copied inside the config folder of the target environment during the deployment process. Using the ant customize all command, the build process will be executed in this case to apply the changes.</p>
+<h3>Additional files and configuration folders</h3>
+<ul>
+<li>In the HCS deployment package, additional files relevant for a deployment can be included.</li>
+<li>ImpEx files may be an example; other files to be used during the deployment of certificates and keys for external services. Note that such files are not a part of the standard deployment process.</li>
+<li>How and when should they be used must be fully documented in the “Additional Instructions” section of the SAP Hybris Deployment Request Form, with clear implementation instructions</li>
+<li>Additional files to be saved in the misc directory and separated into subdirectories for Production and Staging environments.</li>
+</ul>
+<p>ImpEx file:</p>
+<p>To import data, ImpEx file is provided. Specify how and when to use the provided file clearly in the SAP Hybris Deployment Request Form.</p>
+<h5>External service certificate:</h5>
+<p>To allow a secure connection to an external payment provider, an SSL certificate is provided. It is specified where the certificate must be placed in the SAP Hybris Deployment Request Form.</p>
+<h5>Data hub web app:</h5>
+<ul>
+<li>As a standard WAR file, the Data Hub web app is provided. It should be self-contained and ready to work with no external dependencies.</li>
+<li>For all the installations, HCS organizes the web app directory structure in a standard way. It’s because of the use of a specific context and location for each customer which will make it difficult to maintain, manage, and automate.</li>
+</ul>
+<h5>Data hub war file:</h5>
+<p>From the DEV environment, the Data Hub WAR file must be created: datahub-webapp.war. The WAR file is copied inside the datahub/bin folder within the deployment package.</p>
+<h5>Configuration files:</h5>
+<p>To construct the main SAP Hybris configuration file, local.properties, the customer.properties file is used for the target environment in the deployment process. The local.properties file is created by combining the content of the customer.properties provided by the partner, with the information from another configuration file, hybris.properties, managed by HCS.</p>
+<p>hybris.properties file contains server configuration settings that are managed by HCS and they are not supposed to be changed by the HCS customer or partner<strong>.</strong></p>
+<p>To create a proper customer.properties file, all development environment-specific settings are to be removed and replaced with the settings required as per the target environments. Node and environment settings must not include the settings that are already included in hybris.properties.</p>
+<p>As an SAP Hybris Silver Implementation partner since 2013, Techouts helps you build contextual, personalized, and relevant customer experiences that boost your brand loyalty and increase sales conversions. With the advantage of an omnichannel storefront, our team of SAP Hybris Commerce experts helps you target and engage with your customers better, wherever they are. As the world of commerce continues to change, we help you provide your customers with a consistent and meaningful experience – across every channel, every time.</p>
+<p>If you’re ready to convert your digital commerce platform into a next-generation omnichannel customer experience, let’s arrange a free demo. Reach out to us at <a href="mailto:sales@techouts.com">sales@techouts.com</a> to evaluate your business needs.</p>
+        </div>
+    </div>
+</body>
+</html>

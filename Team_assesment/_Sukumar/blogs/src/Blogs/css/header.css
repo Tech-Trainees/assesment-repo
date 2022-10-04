@@ -1,0 +1,84 @@
+.App{
+    position: absolute;
+    top:1px;
+    height:auto;
+    background-color: darksalmon;
+  }
+  /* .div1{
+    position:fixed;
+    top:-80px;
+    left:-1px;
+    width:1924px;
+    height:200px;
+    background-color: #1976d2;
+    background-image: linear-gradient(to bottom right, red, yellow);
+  } */
+  .svg{
+    position: fixed;
+    top:-7px;
+    left:8px;
+    width: 320px;
+    height: 142px;
+  }
+  .name{
+    position: fixed;
+    top:-30px;
+    left:260px;
+    font-size: 45px;
+    color:red
+  }
+  .first{
+    position: fixed;
+    top:25px;
+    left:197px;
+    font-size: 45px;
+    color:greenyellow
+  }
+  .history{
+    position: fixed;
+    top:48px;
+    left:700px;
+    color:white
+  }
+  .case{
+    position: fixed;
+    top:48px;
+    left:864px;
+    color:white
+  }
+  .blog{
+    position: fixed;
+    top:48px;
+    left:1093px;
+    color:white
+  }.home{
+    position: fixed;
+    top:48px;
+    left:482px;
+    color:white
+  }
+  
+  .div2{
+    position:fixed;
+    top:120px;
+    left:-1px;
+    width:1924px;
+    height:36px;
+    background-color:white
+  }
+  .contact{
+    position: fixed;
+    top:48px;
+    left:1277px;
+    color:white
+  }
+  .fly{
+    position:fixed;
+    top:122px;
+    left:-1px;
+    width:100px;
+    height:30px;
+  }
+  
+  
+  

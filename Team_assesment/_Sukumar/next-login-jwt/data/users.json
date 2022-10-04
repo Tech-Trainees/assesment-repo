@@ -1,0 +1,20 @@
+[
+    {
+        "firstName": "john",
+        "lastName": "suku",
+        "username": "john@gmail.com",
+        "hash": "$2a$10$max9DS1NsOb.MUgi9DoUue9x7emqwWc8ujDER05IICs/h3/cY3hg6",
+        "id": 2,
+        "dateCreated": "2022-09-12T08:11:10.989Z",
+        "dateUpdated": "2022-09-12T08:11:10.989Z"
+    },
+    {
+        "firstName": "sukumar",
+        "lastName": "k",
+        "username": "sukumar@gamil.com",
+        "hash": "$2a$10$b21bNEvhtJNIozQoYXxBW.gFRoWU8PONDNw0iCPIcD3XhRCumNvuG",
+        "id": 3,
+        "dateCreated": "2022-09-13T09:43:39.807Z",
+        "dateUpdated": "2022-09-13T09:43:39.807Z"
+    }
+]

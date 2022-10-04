@@ -1,0 +1,51 @@
+/* .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+   
+    height: 40px;
+   width: 50%;
+    border: rgb(35, 35, 35);
+    border-radius: 20px;
+    line-height: 22px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(169, 144, 208);
+  } */
+  /* .MuiButtonBase-root {
+    height: auto;
+  } */
+  .MuiTab-root{
+
+  }
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    text-transform: lowercase;
+    color: rgba(255, 255, 255, 0.48);
+  }
+  .css-1aquho2-MuiTabs-indicator {
+      display: none;
+}
+.css-8atqhb {
+    width: 50%;
+    width:256px;
+}
+.css-6od3lo-MuiChip-label {
+    color: aliceblue;
+}
+.ActiveButton{
+    width: 50%;
+    height: 40px;
+    border: rgb(35, 35, 35);
+    border-radius: 20px;
+    line-height: 22px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(169, 144, 208);
+}
+.DeselectButton{
+    width: 50%;
+    height: 40px;
+    border: rgb(35, 35, 35);
+    border-radius: 20px;
+    line-height: 22px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.48);
+    background-color: transparent;
+}

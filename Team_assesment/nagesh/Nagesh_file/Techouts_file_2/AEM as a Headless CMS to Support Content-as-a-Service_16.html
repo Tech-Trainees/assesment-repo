@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEM as a Headless CMS to Support Content-as-a-Service</title>
+    <style>
+         body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+       .blog_post_title,h1 {
+          color: #0f77bd;
+          font-size: 35px;
+        font-weight: 500;
+        line-height: 1.138888889;
+        line-height: 1.138888889;
+       }
+       .post_date {
+    font-weight: 500;
+    font-size: 16px;
+}
+    p{
+        line-height: 1.476;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    h3{
+        font-weight: 500;
+        letter-spacing: -0.0415625em;
+    line-height: 1.25;
+    font-size: 1.6em;
+    }
+    h5{
+        font-size: 2.4rem;
+        font-weight: 500;
+        letter-spacing: -0.0415625em;
+    line-height: 1.25;
+    }
+    h2{
+        font-weight: 500;
+        font-size: 2.1em;
+    }
+    strong {
+    font-weight: 700;
+}
+    </style>
+</head>
+<body>
+    <div class="entry-header-inner">
+        <h1 clas="blog_post_title">AEM as a Headless CMS to Support Content-as-a-Service</h1>
+        <span class="post_date">04/15/2021</span>
+    </div>
+    <div class="post-inner">
+        <div class="entry-content">
+            <p>The time is overwhelming for technology &amp; innovation. There has been a steady rise in the number of connected devices that are becoming indispensable in our day-to-day lives. Our expectations from these devices are growing as well; we want them to accomplish more, do it quicker, when and where it’s convenient for us. This has led to an outburst of communication channels that advertisers need to work with.</p>
+<p>Many are shifting to a headless CMS as a backend-only archive of digital assets to maintain a consistent brand message while covering the most channels.</p>
+<h3>What is a headless CMS?</h3>
+<p>A headless CMS dissociates the content from the presentation. This enables the digital content to be handled and re-used from a single repository and distribute on various applications. This works well for flexibility but now there is added work to develop the presentation to present the same results. Content can become fragmented over different tools or embedded in silos across applications on the off chance that we aren’t careful. This further hampers conveying a consistent brand story across all channels.</p>
+<h3>AEM as a Headless CMS</h3>
+<p>Headless architecture provides another way of introducing AEM content. Unlike all the other conventional AEM solutions, headless does it without the presentation layer. Here you control the presentation entirely with your own code in any programming language.</p>
+<p>An integrated design like a headless CMS with a central Web Services layer can surmount such challenges. Using this methodology with Adobe Experience Manager – AEM CaaS and Web Services layer serving as a back-end for business applications, it’s easier to build, maintain, test, and present experiences across the customer journey. This approach significantly leverages AEM Content Fragments that authorize users to create channel-neutral content with modifications. They are devised and maintained as page-independent resources.</p>
+<h3>Software infrastructure supporting the businesses on digital platforms can be categorized as follows:</h3>
+<p><strong>Data Tier</strong>: This is the primary hub where information or content dwells. Usually, organizations require a centralized data tier to oversee content efficiently and evade duplication. A central data tier further makes it simpler to execute organization-wide content governance besides assisting to ensure that the content is uniform and exhibits a genuine sense of oneness for the organization’s overall brand image when utilized in different applications.</p>
+<p><strong>Web Services Tier</strong>: Web services are imperative for an enterprise to encapsulate the business rationale, which is indispensable to the core business model of the firm. There is a necessity to keep a central Web Services layer that is skeptical of the underlying information/CMS layer.</p>
+<p><strong>Application Tier</strong>: This level has the organization’s business applications that are utilized by its clients and drive the company’s revenue. Typically, this tier relies on the Web Services tier, which discloses the information from the Data tier.</p>
+<h3>Business Challenges in Using Multiple Systems with Disparate Content Repository and Structure</h3>
+<p>At a point when a business module uses multiple disparate frameworks, they experience a few challenges like:</p>
+<h5>•Long Release Cycles:</h5>
+<p>Business applications are slow to respond to current happenings in the world as they go by a long IT release cycle. It is practically impossible for the applications to consolidate the content changes corresponding to the real-time happenings in the world, and subsequently, it takes more time to publish data about new goods, offers, time-sensitive messages, etc. which prompts a prolonged time to market.</p>
+<p>Migrating these applications to the AEM platform is meticulous, basically in light of the fact that these applications are transactional and require a quick/agile publishing of changes just for the content part. While the business logic rarely changes, the information in the form of messages, labels, disclaimers/disclosures, etc. needs to be modified and published quickly, requiring the use of AEM as a headless CMS.</p>
+<h5>•Duplication of Content:</h5>
+<p>It is common to discover some overlap of content consumption across business applications. Content curated once could be utilized in numerous business applications. To evade duplication of content and to take into account effective content governance, an organization needs to have a central place from where content can be developed and published to numerous business applications across different channels.</p>
+<h5>•Brand Inconsistencies:</h5>
+<p>Business applications are frequently manifested in silos and don’t have a standard content structure and theme, which exhibits inadequately on the company’s branding. This invites for a centralized platform to publish information about the company’s goods, offers, messages, and so on, and to build consistent branding across its business applications and consumer touchpoints.</p>
+<h5>•Poorly Connected Software Systems:</h5>
+<p>The absence of a solitary, consolidated Web Services layer makes it challenging to direct connectivity between the application and data tiers. The lack of system integration between these software systems limits the ability to provide a dynamic, cognitive, and consistent experience to the customers.</p>
+<h2>The Solution – AEM as Headless CMS (Content Tier) + Spring Application (Web Tier) + Open Technologies (Application Tier)</h2>
+<p>The integrated arrangement incorporates the best-of-breed CMS, AEM, going about as the principal hub for all content creation and management. Content generated is exposed as JSON response through the CaaS feature in AEM to the Web Services layer. The Web Services layer is created on Spring Boot outside the AEM platform to guarantee content/data messaging can be processed, business logic can be performed, and the response can be stored. The detachment of this layer from AEM likewise guarantees a long-term stable Web Services layer, skeptical of changes in the underlying CMS.</p>
+<p>This pluggable structure makes it possible for the Web Services layer to keep relaying services flawlessly to several business applications, regardless of whether the underlying CMS is replaced with a different one. The Web Services layer utilizes Amazon S3 to serialize the cached response. In case of a crash, the cache put away in the JVM/memory gets cleared out. In such cases, the cache can be restored by deserializing from Amazon S3.</p>
+<p>Then again we can use packaged caching software like Redis. Redis offers Java APIs called Jedis to manage its cache, which is similar to Amazon S3 APIs. The Web Services layer is fronted with Apigee and uses OAuth2 protocol for the safety of the Web Services APIs. The business applications pull the content through Apigee. The architecture diagram below presents the process flow.</p>
+<h3>Business Benefits of Using AEM as a Headless CMS with the CaaS Model</h3>
+<p>An organization can improve its business tasks significantly with this process execution.</p>
+<h5>•Shorter Release Cycles Leads to a Faster Time-to-Market</h5>
+<p>The use of the AEM platform provides a very fast content creation-to-publishing pipeline, diminishing the time-to-market to mere hours from days or weeks. The proficient content governance model, contoured deployments, automated workflows, and publishing provides quick launches of new items and assists the company with staying ahead of the competition.</p>
+<h5>•Central Repository of Content for Consistent Branding</h5>
+<p>With highlights like CaaS, content fragment variation for channels and language copy for various languages is conceivable, with which a firm can quickly expand business across geographies and channels. The devoted caching mechanism results in impressive page load speed for the organization’s business applications.</p>
+<h5>•Normalize Content Structure for Making Quick Changes:</h5>
+<p>Utilizing CaaS features like content fragments, the current business applications can continue to use their respective technologies like React, AngularJS, and so on, and yet become smart and flexible when it comes to driving content changes rapidly. The dedicated Web Services layer guarantees a long-standing, central layer to outline content as service consistently regardless of whether the organization chooses to switch to a different CMS later.</p>
+<p>&nbsp;</p>
+<p>Organizations need content to go any place and all over the place — websites, mobile apps, IoT gadgets and beyond. However, no one has the time to recreate that content for all those channels. The Content Services in Adobe Experience Manager have all you require for headless content management. Content as a service allows you to utilize any of your content in Experience Manager and deliver that content to any channel. You can set the content for delivery to different devices with only a couple keystrokes. You can then easily manage content and experiences for your digital properties, viewing and modifying content in real time.</p>
+<p>Techouts has an extensive experience helping businesses design, develop, deploy, and manage business solutions, leveraging our technology and experience in using AEM as a headless CMS. We leverage Techouts’s partnership with Adobe since 2014 to bring headless CMS CaaS solutions to our clients in order to enable elegant customer experiences, powered by creativity and technology. With the approach by our Adobe certified staff, we develop comprehensive headless commerce strategies that support every aspect of a seamless customer experience.</p>
+<p>Unlock the capabilities of Content as a Service with AEM Headless CMS for a channel-agnostic and scalable content experience with Techouts today- sales @techouts.com!</p>
+        </div>
+    </div>
+</body>
+</html>

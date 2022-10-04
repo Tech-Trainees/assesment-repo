@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Integration</title>
+</head>
+<style>
+    p,ol li{
+        font-size: 19px;
+        line-height: 1.5;
+        margin-top: 0.5rem;
+    }
+    ol li{
+        margin-top: 0.5rem;
+    }
+    body{
+        font-family: 'Futura Std Condensed'; 
+        letter-spacing: -0.015em;
+        font-weight: 400;
+        }
+    h3,h4{
+        font-family:  'Futura Std Condensed'; 
+        font-weight: bold;
+        font-feature-settings: "lnum";
+        font-variant-numeric: lining-nums;
+        letter-spacing: -0.0415625em;
+        line-height: 1.25;
+    }
+    h3{
+        font-size: 1.75em;
+    }
+    h4{  
+        font-size: 1.5em;
+    }
+    @media only screen and (max-width: 900px) {
+        ol li,p{font-size: 16px;}
+    }
+</style>
+<body>
+    
+	
+    <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">Background</h3>
+        <div class="caseDetailsParagraphText">
+        <p>Our Client is one of the leading retail companies in India with 74 stores across India, Our Client has laid their hands on e-commerce platform with Omni channel presence. They want to increase presence outside India and planned to cater the needs of international customers.</p>
+        </div>
+        </div>
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">Challenge</h3>
+        <div class="caseDetailsParagraphText">
+        <p>Our Client wants to implement International Shipping so that they can deliver the products outside India. Since it is a new implementation, we will face few challenges like:</p>
+        <ol>
+        <li>Changes in complete Order process flow</li>
+        <li>Integrations such as PayPal and Courier</li>
+        </ol>
+        </div>
+        </div>
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">Solution</h3>
+        </div>
+        <div class="caseDetailsSolutionDiv">
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">1. International shipping enablement for a Product</h3>
+        <div class="caseDetailsParagraphText">
+        <p>Our Client wants to implement International Shipping so that they can deliver the products outside India. Since it is a new implementation, we will face few challenges like:</p>
+        </div>
+        </div>
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">2. International shipping charges</h3>
+        <div class="caseDetailsParagraphText">
+        <p>A new Boolean attribute “internationalShippingCharges” will be added to the Product. When customer adds this product to the cart, then international shipping charges will be calculated using the price value available in the field and it will be added to the cart delivery charges.</p>
+        </div>
+        </div>
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">3. User browsing experience</h3>
+        <div class="caseDetailsParagraphText">
+        <p class="caseDetailsParagraphText">Delivery countries data should be available in the system so that the customer can select their specific country. Hybris provide a schema to specify delivery countries. A country dropdown will be provided in the home page, so, user can select a specific country for product browsing. On country selection page, system will store the selected country value in the user session and will use the same country throughout the user session. If the customer selects the country other than India, system will consider it as international browsing and user can only see the International shipping enabled products while browsing.</p>
+        <p class="caseDetailsParagraphText">Solr configurations will be customized to store the “internationalShippingEnabled”, “internationalShippingCharges” attribute values in the Solr data repository.</p>
+        <p class="caseDetailsParagraphText">Solr facet search configurations will be customized to search products based on flag, “internationalShippingEnabled”.</p>
+        <p class="caseDetailsParagraphText">Solr queries will be customized to add new query parameter “:relevance:internationalShippingEnabled:” base on the customer country selection. By default this parameter is will not be used in queries. When user selects a country other than India then the parameter will be added to Solr query and Solr will return international shipping enabled products in results.</p>
+        </div>
+        </div>
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">4. Vouchers and Promotions</h3>
+        <div class="caseDetailsParagraphText">
+        <p>New voucher Model will be created to define vouchers for international and domestic orders.</p>
+        </div>
+        </div>
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">5. PayPal Integration</h3>
+        <div class="caseDetailsParagraphText">
+        <p>Integrating the PayPal related extensions provided by Hybris, but if the extension does not fit to the requirement then custom extension will be created and used.</p>
+        </div>
+        </div>
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">6. Webservices for mobile client</h3>
+        <div class="caseDetailsParagraphText">
+        <p>OCC webservices will be customized to accept country code in the request parameters and returns appropriate results to the client.</p>
+        <p><img loading="lazy" class="alignnone wp-image-660 size-large" src="https://techouts.com/wp-content/uploads/2020/05/international_Arc_1-1024x719.png" alt="" srcset="https://techouts.com/wp-content/uploads/2020/05/international_Arc_1-1024x719.png 1024w, https://techouts.com/wp-content/uploads/2020/05/international_Arc_1-300x211.png 300w, https://techouts.com/wp-content/uploads/2020/05/international_Arc_1-768x539.png 768w, https://techouts.com/wp-content/uploads/2020/05/international_Arc_1-1200x842.png 1200w, https://techouts.com/wp-content/uploads/2020/05/international_Arc_1.png 1314w" sizes="(max-width: 580px) 100vw, 580px" width="580" height="407"></p>
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">Results / Benefits</h3>
+        <div class="caseDetailsParagraphText">
+        <p>With clear segregation of roles in using application, entire process of authoring, sharing, delivering reports has been streamlined. Both OLAP repository and BIRT repository are integrated to AD (active directory) directory services and currently serving as one stop enterprise report repository.</p>
+        </div>
+        </div>
+        <div class="caseDetailsInnerContents">
+        <h3 class="caseDetailsHeadingTitle">About</h3>
+        <div class="caseDetailsParagraphText">
+        <p>Techouts is a global IT services and product company, providing business technology services and solutions on platforms like SAP, Open-source, Microsoft, Mobility and Cloud. As a partner of leading product companies such as SAP and Adobe, we focus on the areas like Enterprise Commerce, Big Data, Analytics and Customer Engagement Commerce. Our consultants bring real world experience and domain expertise to help achieve transformation around global outsourcing, IT cost optimization, complex package integration and risk management.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+            
+                   
+</body>
+</html>

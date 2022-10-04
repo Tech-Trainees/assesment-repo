@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+svg {
+  display: block;
+  font: 'Montserrat';
+  font-size: 80px;
+  width: 960px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top:-120px;
+  
+}
+
+.text-copy {
+  fill: none;
+  letter-spacing: 30px;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+stroke: #4D163D;
+animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+stroke: #840037;
+animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+stroke: #BD0034;
+animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+stroke: #BD0034;
+animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+stroke: #FDB731;
+animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+100% {stroke-dashoffset: -35%;}
+}
+
+
+
+
+.one{
+    background-image: url("../images/g3.jpg");
+    width: 800px;
+    height: 550px;
+    opacity: 0.5;
+    margin-left: 100px;
+    margin-top: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+  }
+  .div{
+    display: "flex";
+    font-size:"50px";
+    font-family:"Georgia" ;
+    color:rgba(25, 153, 228, 0.836);
+    text-shadow: 2px 2px 5px black;
+    word-spacing: 15px;
+    letter-spacing: 5px;
+    background-image: url("../images/bground.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    width: fit-content;
+  }
+  .h1head{
+     margin-top: 150px;
+     text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #1b8fddde 25%,
+      #1bb97cd7 50%,
+      #bcda15cb 75%,
+      #ffffff 100%
+    );
+    background-size:contain ;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: rgb(204, 243, 96);
+    background-clip: text;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent ;
+    animation: textclip 2s reverse infinite;
+    display: inline-block;
+        font-size: 70px;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+   body{
+    overflow-x: hidden;
+  } 
+  
+   .div1{
+    background-image: url("../images/g2.jpg");
+    background-size: cover;
+    height: 550px;
+    margin-top: 60px;
+    opacity: 0.8;
+    padding: 5px;
+
+  } 
+  .slide4{
+    background-image: radial-gradient(circle,rgba(252, 252, 252, 0.877),rgb(11, 224, 196));
+    height: 550px;
+    width: 100%;
+    margin-top: 60px;
+    opacity: 0.8;
+    padding: 5px;
+
+  } 
+  .dev{
+    text-align: justify;
+    font-size: 40px;
+    width: 550px;
+    margin-left: 30px;
+   }
+   .webdev{
+    width:"790px";
+    height:"555px";
+    opacity:"0.5" ;
+    margin-left:"200px";
+    border-radius:"50% 0 0 50%";
+    box-shadow: 5px 5px 15px rgb(10, 149, 230);
+   }
+ .dsgnfcts{
+  font-size: 70px;
+  font-weight: bolder;
+  width: 500px;
+  float: left;
+  opacity: 1;
+  padding-left: 10px;
+  text-align:left ;
+  margin-left: 40px;
+ }
+ 
+  .slide3{
+    background-image: url("../images/banner.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 550px;
+    margin-top: 60px;
+    opacity: 0.8;
+    padding: 5px;
+
+  } 
+  .slide2{
+    background-image: url("../images/wd1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    margin-top: 60px;
+    opacity: 0.8;
+    padding: 5px;
+
+  } 
+  .para1{
+    width: 600px;
+    text-indent: 40px;
+    font-size: 30px;
+    padding: 5px;
+    text-align: justify;
+  }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            .form{
+                background-color: aqua;
+                width:500px;
+                height:645px;
+                margin-top: 100px;
+            }
+            .firstname{
+                width:200px;
+                height:30px;
+                margin-left:60px;
+                margin-top: 40px;
+            }
+            .password{
+                width:200px;
+                height:30px;
+                margin-left:60px;
+                margin-top: 20px;
+            }
+            .Gmail{
+                width:200px;
+                height:30px;
+                margin-left:80px;
+                margin-top: 20px;
+            }
+             .dateofbirth{
+                width:200px;
+                height:30px;
+                margin-left: 50px;
+                margin-top: 20px;
+             }
+             .number{
+                width:200px;
+                height:30px;
+                margin-left:30px;
+                margin-top: 20px;
+             }
+             .city{
+                width:200px;
+                height:30px;
+                margin-left:100px;
+                margin-top: 20px;
+             }
+             .div1{
+                border: 2px solid black;
+                height: 640px;
+             }
+.checkbox{
+    margin-top: 20px;
+    margin-left: 0px;
+}
+        </style>
+    </style>
+</head>
+<body style="backgroundcolor:'gray';">
+    
+    <center>
+        
+    <form action="form_page.php" class="form " method="post">
+        <div class="div1">
+        <h1 style="color:rgb(5, 84, 111)"><u>Registaion form...</u></h1>
+        <lable class="f_name" >firstname:</lable>
+        <input type="text" required class="firstname" placeholder="firstName" name="firstname" ><br><br>
+        <lable class="p_password">password:</lable>
+        <input  type="password"  placeholder="password" required class="password" name="password"><br><br>
+        <lable class="g_mail">Gmail:</lable>
+        <input type="text" placeholder="@mail" required class='Gmail'name="Gmail"><br><br>
+        <lable class="date_of_birth">DateofBirth</lable>
+        <input type="date"  class="dateofbirth" name="DateofBirth" required ><br><br>
+        <lable class="p_number">phonenumber:</lable>
+        <input type="text" placeholder="Phonenumber"  class="number"  required name="Phonenumber"><br><br>
+        <lable class="c_city">city</lable>
+        <input type="text"  placeholder="city" class="city" required name="city"><br><br>
+        <input type="checkbox" class='checkbox'checked="checked" required name="sameadr"> I have read and agree to the terms of the condtion</input><br><br>
+   <input type="submit" Value="submit">
+</div>
+    </form></center>
+</body>
+</html>

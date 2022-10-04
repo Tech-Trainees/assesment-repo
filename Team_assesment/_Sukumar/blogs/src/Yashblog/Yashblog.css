@@ -1,0 +1,204 @@
+.Start{
+    border-radius: 20px;
+    width: 150px;
+    position: relative;
+    text-align: center;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Roboto,sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    height: 35px;
+    border: 1.5px solid #000;
+    left: 58em;
+}
+.startspan{
+    position: relative;
+    top: 5px;
+}
+.Start:hover{
+    background: #daebed;
+}
+.getstart{
+    position: relative;
+    background: #e4ff77;
+    height: 50px;
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+.getstartspan{
+    position: relative;
+    top: 15px;
+    font-size: 17px;
+}
+.thirddiv{
+    position: relative;
+    margin: 30px 0px 30px 30px;
+}
+.solfor{
+    position: relative;
+    text-align: center;
+    width: 40%;
+    font-size: 3em;
+}
+.joinof{
+    position: relative;
+    text-align: center;
+    width: 40%;
+    font-size: 1.2em;
+    top: 30px;
+    margin-bottom: 30px;
+}
+.getstart2{
+    position: relative;
+    background: #ff5a47;
+    width: 170px;
+    height: 70px;
+    text-align: center;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 500;
+    font-family: sans-serif;
+    border-radius: 50px;
+    left: 8em;
+    margin-top: 3em;
+    cursor: pointer;
+}
+.getstart2:hover{
+    background:#d94c58 ;
+}
+.getstart2span{
+    position: relative;
+    top: 22px;
+    color: white;
+}
+.imgsdiv{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    display: inline-block;
+    top: -0px;
+}
+.imgages1{
+    width: 250px;
+    height: 100px;
+    border-radius: 25px;
+    padding: 10px;
+}
+.imgages1:hover{
+    transform: scale(1.1);
+}
+.trustby{
+    position: relative;
+    text-align: center;
+    font-size: 2.2em;
+    margin: 20px 0px 30px 0px;
+}
+.imagesnames{
+    position: relative;
+    display: inline-flex;
+    margin: 20px 0px 30px 0px;
+}
+.nameimg{
+    position: relative;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.nameimg1{
+    position: relative;
+    margin-left: 22em;
+    cursor: pointer;
+}
+#insideimg{
+ width: 100px;
+}
+.nameimg2{
+    position: relative;
+    margin-left: 50px;
+    height: 50px;
+    top: 12px;
+    cursor: pointer;
+}
+.nameimg:hover{
+    transform: scale(1.1);
+}
+.nameimg1:hover{
+    transform: scale(1.1);
+}
+.nameimg2:hover{
+    transform: scale(1.1);
+}
+.imgtrust{
+    position: relative;
+    margin: 50px 0px 100px 0px;
+}
+.footimagesnames{
+    position: relative;
+    display: inline-flex;
+    margin: 10px 0px 0px 0px;
+}
+.foottrustby{
+    position: relative;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 0px 0px 30px 0px;
+}
+.footnameimg1{
+    position: relative;
+    margin-left: 0em;
+    cursor: pointer;
+}
+.footnameimg1:hover{
+    transform: scale(1.1);
+}
+.footfooter{
+  position: bottom;
+  width: 100%;
+  height: 470px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+.lastdiv{
+    position: relative;
+    display: inline-flex;
+    margin: 130px 0px 30px 0px;
+    text-align: center;
+}
+.lastimg1{
+    position: relative;
+    margin-left: 100px;
+    width: 300px;
+    height: 170px;
+}
+.lineimage{
+    position: absolute;
+    width: 300px;
+    height: 170px;
+    background: #FAE5D3 ;
+    display: none;
+    top: 0px;
+    cursor: pointer;
+}
+.lastimg1:hover .lineimage{
+    display: block;
+    opacity: 0.7;
+}
+.lineimagespan{
+    position: relative;
+    font-size: 23px;
+    font-weight: 500;
+    top: 70px;
+}   
+.lineimage2{
+    position: absolute;
+    width: 320px;
+    height: 160px;
+    background: #FAE5D3 ;
+    display: none;
+    top: 0px;
+    cursor: pointer;
+}
+.lastimg1:hover .lineimage2{
+    display: block;
+    opacity: 0.7;
+}

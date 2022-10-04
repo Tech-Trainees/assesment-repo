@@ -1,0 +1,56 @@
+<html>
+    <head>
+    <style>
+        .form_loginpage{
+            background-color: darkcyan;
+                width:300px;
+                height:300px;
+                margin-top: 70px;
+                border-radius: 20px;
+        }
+        .loginpage_head{
+            margin-top: 100px;
+            color:lightblue
+        }
+        .firstname_login{
+            width:195px;
+            height:40px;
+        }
+        .password_login{
+            width:195px;
+            height:40px;
+        }
+        .login{
+            width:115px;
+            height:40px;
+            background-color: rgb(12, 216, 162);
+            cursor: pointer;
+        }
+        .login:hover{
+            background-color: deepskyblue;
+        }
+        .comment{
+            font-size: 9px;
+            margin-top: -14px;
+        }
+.checkbox{
+    margin-left: -215px;
+    margin-top: 0px;
+}
+
+    </style>
+  
+    </head>
+    <body>
+        <center>
+        <form class="form_loginpage">
+            <h1 class="loginpage_head"> Login page</h1>
+             <input type="text" class="firstname_login"   required minlength="6" maxlength="10" name='firstname'placeholder=" Firstname"/><br/><br/>
+             <input type="text"class="password_login"  required minlength="6" maxlength="10" name="password" placeholder=" Password"/><br/><br/>
+             <input type="checkbox" class="checkbox" required value="checkbox" name="sameadr"/> 
+             <p class='comment'>I have read and agree to the terms of the condtion</p>
+             <button class="login"><a style='text-decoration: none;'href='./welcome_page.html'>Login</a></button>
+        </form>
+    </center>
+    </body>
+    </html>

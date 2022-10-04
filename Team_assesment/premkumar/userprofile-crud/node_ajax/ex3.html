@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Status</title>
+    <style>
+        body{
+    background-color: rgb(194, 205, 209);
+    
+}
+#split{
+    display: flex;
+    margin-left: -60px;
+}
+
+.ppicture {
+    border-radius: 50%;
+    border: 8px solid antiquewhite;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top: 80px;
+    left: 80px;
+}
+
+.name,.status {
+    position: relative;
+    left: 200px;
+    top: 0;
+}
+
+
+.name {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(3, 3, 3);
+}
+.status{
+    margin-top: 10px;
+    font-size: large;
+   color: rgb(124, 119, 119);
+}
+
+    </style>
+</head>
+<script >
+
+
+function fetchuser() {
+    
+    var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        loadUsers(this.responseText);
+    }
+    };
+    xhttp.open("GET", "http://127.0.0.1:8000/user", true);
+    xhttp.send();
+}
+
+function loadUsers(data){
+    
+    var json =JSON.parse(data);
+    let str = "";
+    for(let i=0; i<json.length; i++){
+         str+=`<div class="user">
+        <div> <img class="ppicture" id="ppicture`+json[i].userId+`" src="`+json[i].profilePicture+`"></div>
+        <div class="name">`+json[i].name+`</div>
+        <div class="status">`+json[i].statusMessage+`</div>
+        </div>`
+    }
+    
+    document.getElementById("div1").innerHTML = str;
+    presence(json);
+    presence(json);
+}
+
+function presence(json){
+    //var json=JSON.parse(json);
+    for(i=0;i<json.length;i++){
+        document.getElementById('ppicture'+json[i].userId).style.borderColor =
+        json[i].presence==1 ? 'green' :
+        json[i].presence==2 ? 'red' :
+        json[i].presence==3 ? 'yellow' : 'grey';      
+    }
+
+}
+
+
+function addUser()
+{
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    //document.getElementById("demo").innerHTML = this.responseText;
+  }
+  };
+  var newuser=prompt("Enter user Id");
+  var newname=prompt("Enter user name");
+  var newstatus=prompt("Enter updated status");
+  var newdisplayPic=prompt("Enter Url of user picture");
+  var newpresen=prompt("Enter prescence");
+  myJson={
+    "userId": newuser,
+    "name": newname,
+    "profilePicture": newdisplayPic,
+    "statusMessage": newstatus,
+    "prescence": newpresen
+}
+    xhttp.open("POST", "http://127.0.0.1:8000/user", true);
+  xhttp.setRequestHeader("Content-type", "application/json");
+  xhttp.send(JSON.stringify(myJson));
+
+  fetchuser();
+  fetchuser();
+ }
+
+function deleteuser() {
+    var id = prompt('Enter user id to delete:')
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    //
+    }
+    };
+    alert("Are u sure u want to delete...!");
+    xhttp.open("DELETE", "http://127.0.0.1:8000/user"+id, true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+    fetchuser();
+   }
+
+function updateStatus(){
+    var id=prompt("Enter User Id" );
+    var stats=prompt("Enter New Status ");  
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    //document.getElementById("demo").innerHTML = this.responseText;
+    }
+    };
+    xhttp.open("PUT", "http://127.0.0.1:8000/user"+id, true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({"statusMessage":stats}));
+    fetchuser();
+   fetchuser();
+    }
+
+function updatepresence(){
+    var id=prompt("Enter User Id" );
+    var presen=prompt("Enter New prescence: ");
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    //document.getElementById("demo").innerHTML = this.responseText;
+    }
+    };
+    xhttp.open("PUT", "http://127.0.0.1:8000/presence/user"+id, true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({"presence":presen}));
+   alert("Updated successfully");
+   
+   fetchuser();
+   fetchuser();
+   fetchuser();
+}
+
+</script>
+<body onload="fetchuser();">
+    
+        <div id="split">
+           <div id="div1" style="width: 60%;">
+
+           </div>
+           
+           <div class="button" style=" display: block;
+           position: relative; top: 28px;
+           right: 50px;" >
+            <button onclick="addUser();" style="padding: 10px;height: 57px; width: 100px; margin-bottom: 3px; margin-top: 50px; margin-left: 40px; background-color: rgb(147, 233, 10); ">Add user<i class="fa-solid fa-circle-plus" class="w3-xlarge" style="margin-left: 5px;"></i></button><br>
+            <button onclick="updatepresence();" style="padding: 10px; width: 100px; margin-top: 50px; margin-left: 40px; background-color: rgb(108, 139, 163);">Update Presence</button><br>
+            <button onclick="updateStatus();" style="padding: 10px; width: 100px; margin-top: 50px; margin-left: 40px; background-color: rgb(25, 218, 192);">Update Status</button><br>
+            <button onclick="deleteuser();" style="padding: 10px; width: 100px; margin-top: 50px; margin-left: 40px; background-color: rgb(243, 118, 16);">Delete User</button>
+            </div>
+        </div>
+    
+</body>
+</html>

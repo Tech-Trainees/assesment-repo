@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEM Micro Services Architecture and Process</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            letter-spacing: -0.015em;
+            line-height: 1.5;
+        }
+       .blog_post_title,h1 {
+          color: #0f77bd;
+          font-size: 35px;
+        font-weight: 500;
+        line-height: 1.138888889;
+        line-height: 1.138888889;
+       }
+       .post_date {
+    font-weight: 500;
+    font-size: 16px;
+}
+    p{
+        line-height: 1.476;
+        font-size: 16px;
+    }
+    h3{
+        font-weight: 500;
+        letter-spacing: -0.0415625em;
+    line-height: 1.25;
+    }
+    h5{
+        font-size: 2.4rem;
+        font-weight: 500;
+        letter-spacing: -0.0415625em;
+    line-height: 1.25;
+    }
+    strong {
+    font-weight: 700;
+}
+    </style>
+</head>
+<body>
+    <div class='entry-header-inner'>
+<h1 class="'blog_post_title">AEM Micro Services Architecture and Process</h1>
+<span class="post_date">04/15/2021</span>
+    </div>
+    <div class="post-inner">
+        <div class="entry-content">
+            <p>In Adobe Experience Cloud, AEM is the next-generation platform to build and serve amazing customer experiences. It is designed to leverage the power of cloud technologies to develop and host AEM solutions. The introduction of microservices architecture in AEM allows it to auto-scale and provide agility independently, thereby eliminating the need to worry about right-sizing your infrastructure. Additionally, it lets AEM process a broad range of file types with more formats than what was possible with the previous, standard AEM versions. AEM microservices architecture adopts an everything-as-a-service model that identifies multiple interactions (e.g., content consumption, ordering, product catalogs, promotions, etc.) as headless services. The headless approach is what allows AEM for a strong decoupling and flexibility across various underlying technology components of the consumer experience. It supports a variety of evolving channels, as well as allows seamless processing for resource-intensive operations for the evolving technology landscape.</p>
+<h3>High Level AEM Architecture</h3>
+<p>AEM as a Cloud Service comprises of huge underlying architectural changes. So, let’s look at a high level AEM architecture to clearly understand the key elements of asset ingestion and processing and the flow of assets across the system.</p>
+<h5>The essential steps in the ingestion and processing using AEM microservices involve</h5>
+<p>• Clients, such as web browsers, send an upload request to the author, i.e., Experience Manager and start uploading the binary directly to the binary cloud storage.</p>
+<p>• When the direct binary upload completes, the client notifies the Experience Manager.</p>
+<p>• Then a processing request is sent to asset microservices by Experience Manager. The request contents depend on the processing profiles configuration in Experience Manager that specifies which renditions to generate.</p>
+<p>• The back end at Asset microservices accepts the processing request and dispatches it to one or more microservices based on the request. Each microservice directly obtains the original binary from the binary cloud store.</p>
+<p>• The processing results, for instance, renditions, are stored in the binary cloud storage.</p>
+<p>• The process completion notification is sent to the Experience Manager along with direct pointers to the generated binaries (renditions). The generated renditions for the uploaded asset are available in Experience Manager.</p>
+<p>This high-level AEM architecture explains the basic flow of asset ingestion and processing. The Experience Manager, if configured, can also initiate a custom workflow model to do post-processing of the asset.</p>
+<h3>Asset Upload with Direct Binary Access</h3>
+<p>Experience Manager clients support upload with direct binary access by default. In direct binary access, once the assets are configured for Experience Manager environments, they are transported (and uploaded) to the Cloud Binary Store. Thereafter the Experience Manager, asset microservices, and finally clients get direct access to them to execute their work. This approach reduces the load on networks and the duplication of binaries stored.<br>
+When the Experience Manager performs the upload function, it includes upload using a web interface, Adobe Asset Link, and Experience Manager desktop app.<br>
+One can use custom upload tools, which work directly with Experience Manager HTTP APIs. The APIs can either be used directly, or the following open-source projects can be used and extended that implement the upload protocol:<br>
+• <strong>Open-source upload library</strong><br>
+• <strong>Open-source command-line tool</strong></p>
+<h3>Custom Asset Addition</h3>
+<p>Although maximum consumers get all their asset processing needs from the configurable asset microservices, some may require additional asset processing. It is particularly evident when assets need to be processed based on data coming from other systems via integrations. In such cases, custom post-processing workflows can be used.<br>
+Post-processing workflows are regular Experience Manager workflow models, designed and handled in Experience Manager Workflow editor. Consumers can configure the workflows to implement the additional processing steps on an asset, including the utilization of available out-of-the-box workflow procedures and custom workflows.<br>
+AEM can be configured to trigger the post-processing workflows automatically after asset processing is done.</p>
+<h3>Advantages and Drawbacks of AEM Microservices</h3>
+<p>The most commonly referred to advantages of AEM microservices architecture are:<br>
+• <strong>Improved scalability</strong> – You can scale just one part of the system which actually needs it. You needn’t bother with additional AEM licenses to scale heavy-processing parts of the system, like search, user management, and so on.</p>
+<p>• <strong>Faster development</strong>&nbsp; – Utilize technology that best suits your requirements; there’s no restriction to AEM/OSGi stack. You can also dissociate your teams effectively as they may deal with the separate applications with separate technology stacks.</p>
+<p>• <strong>Better performance</strong> – The system performs better and turns out to be steadier than a pure AEM-based one.</p>
+<p>• <strong>Increased agility</strong> – Any change introduction is simpler and takes less time because of the well-separated services.</p>
+<p>As with any notable advantage, there are a couple of drawbacks to consider when moving from conventional architecture to an agile, more scalable microservices architecture. Here are the few challenges with the microservices architecture:</p>
+<p>• <strong>Complicated Infrastructure</strong>– Microservices bring about increased interconnections and interdependencies that raise the complexity of the architecture</p>
+<p>• <strong>Requires careful planning</strong>– If the structuring to map functionalities and dependencies is not planned carefully, all the advantages of microservices may wither away.</p>
+<p>• <strong>Proper sizing is critical, and hard to calculate:</strong> Improperly scaling Microservices architecture will create an imbalance that would be quite challenging to solve without extra resources and special talent.</p>
+<p>With more and more organizations now switching to iterative development, it is essential to have an underlying architecture that is robust, scalable, and easily adaptable to real-time business needs. And AEM Microservices is the answer to that.</p>
+<p>Time and again, Techouts has proved its worth as the best technology partner that can deliver the best of both worlds- AEM &amp; Microservices to clients seeking to achieve organizational success through Adobe marketing solutions. As a proud Adobe implementation partner, Techouts has positioned itself to achieve digital maturity by focusing on data, customer-centricity, and exponential ROI; by blending exceptional user experience and data-driven methodologies in Adobe Experience Cloud.</p>
+<p>Our expertise in AEM microservices has made us a global leader in understanding the digital ecosystem better than our competitors ultimately ushering our clients toward a more profitable digital landscape.</p>
+<p>If you are looking for snappy builds and more manageable facets of development with AEM Microservices, reach us today!</p>
+        </div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,17 @@
+div:nth-child(1){
+    color: brown;
+    background:rgb(237, 204, 237);
+   
+}
+
+div{
+    border: 2px dashed black;
+    margin: 10px;
+}
+:nth-last-child(3){
+    color:rgb(8, 188, 188) ;
+}
+:nth-child(3){
+    color:palevioletred ;
+    background-color: rebeccapurple;
+}

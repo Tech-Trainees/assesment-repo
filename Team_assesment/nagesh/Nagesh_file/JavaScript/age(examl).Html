@@ -1,0 +1,32 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+      <h1 id="word"></h1>
+      <input id="age" />
+      <p id="demo"></p>
+      <button onclick="hello()">click me</button>
+      <h1 id="date"></h1>
+      <script>
+         function hello(){ 
+            let age=Number(document.getElementById("age").value);
+            if(isNaN(age)){
+
+            }else{
+                voteable=(age < 25) ?"too young":"old enough !";
+
+            }
+            document.getElementById("demo").innerHTML=voteable;
+         }
+        //  let Months=["junuary","february","march","april","may","jun","july","august","september","november","december"]
+        let Days=["Sunday","monday","tuesDay","wednsDay","thursday","friday","saturday"]
+      let date=new Date();
+      let month=Days[date.getDay()];
+         document.getElementById('date').innerHTML=month+1;
+         let word=['jnfsnffks','fhhkkjsdn','iuhsdhdsfhs','fsjsjfjsdbfjs']
+   document.getElementById('word').innerHTML=word.length();
+
+      </script>
+    </body>
+</html>

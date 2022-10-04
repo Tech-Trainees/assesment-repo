@@ -1,0 +1,47 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1> Hello world !!!!</h1>
+        <p id="demo"></p>
+        <!-- <script>
+    if(new Date().getHours()<25){
+             gretting="good morning"
+    } else if (new Date().getHours()<24){
+        gretting="good afternoon !!!"
+    }else{
+        gretting="good night !!!"
+    }
+    document.getElementById("demo").innerHTML=gretting;
+        </script> -->
+        <script>
+          let day;
+          switch(new Date().getDay()){
+            case 0:
+                day="Today is sunday";
+                break;
+                case 0:
+                day="Today is tuesday";
+                break;
+                case 2:
+                day="Today is tuesday";
+                break;
+                case 3:
+                day="Today is wednsday";
+                break;
+                case 4:
+                day="Today is thursday";
+                break;
+                case 5:
+                    day="Today is friday"
+                case 6:
+                day="Today is saturday";
+                break;
+              default :
+              day="undfind today value"
+          }
+          document.getElementById('demo').innerHTML="today is"+day;
+        </script>
+    </body>
+</html>

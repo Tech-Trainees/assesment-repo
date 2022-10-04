@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralized AEM</title>
+</head>
+<style>
+    p,ul li{
+        font-size: 19px;
+        line-height: 1.5;
+        margin-top: 0.5rem;
+    }
+    ul li{
+        margin-top: 0.5rem;
+    }
+    body{
+        font-family: 'Futura Std Condensed'; 
+        letter-spacing: -0.015em;
+        font-weight: 400;
+        }
+    h3{
+        font-size: 1.75em;
+        font-family:  'Futura Std Condensed'; 
+        font-weight: bold;
+        font-feature-settings: "lnum";
+        font-variant-numeric: lining-nums;
+        letter-spacing: -0.0415625em;
+        line-height: 1.25;
+    }
+   
+    @media only screen and (max-width: 900px) {
+        ul li,p{font-size: 16px;}
+    }
+</style>
+<body>
+    
+		<h3>Leveraging Adobe Experience Manager (AEM) to the fullest potential and customizing it to enhance as Content-as-a-Service (headless).</h3>
+        <p>This case focuses on leveraging Adobe Experience Manager (AEM) as the core content management system. As you may know, AEM with its powerful content management capabilities is one of the most advanced CMS used by mid-sized companies and enterprises for content management. In fact, Gartner termed AEM as a leader in the web content management market for the 9th consecutive year.</p>
+        <p>Further, this case talks about how Techouts has customized AEM, made it headless when content is being used as a service, leveraging AEM Sites – developed web templates using React JS and set standard operating procedures for leveraging digital assets in AEM DAM through a disparate content personalizing engine.</p>
+        <h3>About Customer</h3>
+        <p>Our customer is a conglomerate company who seeks to bring in all the group consumer businesses under one platform. With more than 10 consumer businesses, our customer wants to cross-sell their products and services to consumers with a super app based on a recent purchase from any one of their consumer businesses. This helps the company to engage, promote, communicate, and sell their services and products to consumers across all industries with superior customer experience.</p>
+        <h3>Background</h3>
+        <p>So how do you record purchases from one business and sell products and services from different businesses based on the recorded purchase? How to determine consumer purchasing decisions, accurate interests, and needs? How do you want to build your CX design, choose the right technology products and solutions, be in the competition and generate new revenue streams?</p>
+        <p>So our client decided to build a mobile app, more like a ‘Super App’, developed to offer various services under one umbrella. A super app would be exceeding a shopping mall when compared in the physical world.</p>
+        <p>The unique selling point of a super-app – it centralizes various services so that a consumer can complete multiple tasks or actions in one place and switching between programs or providers to get things done becomes easier. This also means fewer registrations, fewer incidences of providing payment details, and an overall reduction of friction.</p>
+        <h3>Key business scenarios</h3>
+        <ul>
+        <li>Customizing AEM: Content-as-a-Service</li>
+        <li>Leveraging AEM to build User Interface (UIs): templates development using React JS</li>
+        <li>Providing AEM DAM authorization access to various business teams for content creation</li>
+        <li>AEM Setup: Adobe Managed Services</li>
+        <li>Triggering content published by various businesses in a single place (mobile app) using Adobe Campaign, Adobe Target, and MSD</li>
+        <li>Triggering personalized offers and promotions based on user analytics recorded by Adobe Analytics</li>
+        <li>Injecting content to personalizing engines based on APIs (JSON)</li>
+        <li>Developed Single Sign-on (SSO) authentication for various services</li>
+        </ul>
+        <h3>Solution:</h3>
+        <p><img loading="lazy" class="alignnone wp-image-1544" src="https://techouts.com/wp-content/uploads/2021/03/pic-300x152.jpg" alt="" srcset="https://techouts.com/wp-content/uploads/2021/03/pic-300x152.jpg 300w, https://techouts.com/wp-content/uploads/2021/03/pic-1024x518.jpg 1024w, https://techouts.com/wp-content/uploads/2021/03/pic-768x388.jpg 768w, https://techouts.com/wp-content/uploads/2021/03/pic.jpg 1080w" sizes="(max-width: 511px) 100vw, 511px" width="511" height="259"></p>
+        <p>Architecture</p>
+        <h3>Customizing AEM for content-as-a-service</h3>
+        <p>Templates / widgets development: Below ‘figure 1’ is a representation of how the frontend is designed and backend development is being taken care of.</p>
+        <p>Our approach was simple. We decided to develop widgets based on channel content and categories specified by the content team. We developed it in a way to leverage these widgets/templates in various channel pages.</p>
+        <h3>What is a channel and widget / template here?</h3>
+        <p>Channels are consumer businesses in the group and each channel will have pages in the app to showcase services, customized offers, and promotions; respective channel SPOCs will be defining and configuring the widgets in AEM.</p>
+        <p><img loading="lazy" class="alignnone wp-image-1545" src="https://techouts.com/wp-content/uploads/2021/03/pic2-300x222.jpg" alt="" srcset="https://techouts.com/wp-content/uploads/2021/03/pic2-300x222.jpg 300w, https://techouts.com/wp-content/uploads/2021/03/pic2.jpg 737w" sizes="(max-width: 515px) 100vw, 515px" width="515" height="381"></p>
+        <p>Figure 1.</p>
+        <h3>Injecting configured widgets / templates in the AEM into mobile app</h3>
+        <p>Individual channel teams will be authoring the content as per their requirements; tagging and naming conventions will be followed and finally, the content is published.</p>
+        <p>After content has been published by channel teams, Techouts generates APIs for the content widgets. We have used JSON structure for the APIs. These generated APIs are injected into the content personalizing engines. These engines are external and will be triggering content based on content tags, consumers recent purchase, interest, and need.</p>
+        <p>These configured widgets are dynamic and can be configured anywhere in the channel pages either using tags- these can be automatically loaded by personalizing engines as suggested content or injected just as a static content.</p>
+        <h3>Mobile app homepage customization: Solving the challenge</h3>
+        <p>Even though widgets are dynamic, our clients want to have widgets/templates in a defined order for the app home page. So the look and feel of the app remains as per the UX design.</p>
+        <p>We have customized a set of content fragments for the app homepage and generated APIs, and defined standard operating procedures (SOP) for content authors. So we have defined particular folders, where these content fragments are created as the default widgets for the homepage and naming convention is given to identify the order of the widgets. Anyone who wants to author the home page widgets can refer to the SOP and add or modify content. Using these SOP instructions, content team can access AEM and manage the entire mobile app home page.</p>
+        <h3>Single Sign-on (SSO) development: A globally functioning user account</h3>
+        <p>SSO was developed to provide mobile app consumers a single account that can be synced with all of their consumer businesses’ websites and purchases. This account also has a mobile wallet option which is accepted globally when purchasing products and services from the group businesses so consumers across the group can access the app and purchase services and products without a payment glitch.</p>
+        <p>A synchronising cart: Further consumers can add products to the cart at any of the available group’s online shopping websites and later if the consumer visits the mobile app, the cart automatically is updated with products added at different websites into the mobile app cart based on the SSO functionality. It thereby eases the user’s transactional journey.</p>
+        <p>All these additional features are developed as microservices and integrated into AEM and group’s backend systems.</p>
+        <blockquote><p><em>Please reach us at <a href="mailto:info@techouts.com">info@techouts.com</a> for a detailed case study on how we have customized Mad Street Den (MSD), Adobe Target, and Adobe Campaign (content personalizing engines) to trigger content in AEM. And how Adobe Analytics was leveraged by these content personalizing engines to showcase personalized services, products, offers, and promotions to consumers.</em></p></blockquote>
+        <p>With all businesses adopting digital transformation, the absence of a headless architecture can lead to several challenges, including slower time-to-market, massive IT dependency, challenges in optimization, and more. Techouts leverages its expertise in AEM to use it as a headless CMS to support and serve as a CaaS engine.</p>
+        <p>With this approach, we majorly leverage AEM content fragments that allow users to create channel-neutral content with variations. This provides a unified, engaging experience to the customers across various channels thus creating a distributed architecture to meet their needs.</p>
+        <p>The AEM solutions crafted by Techouts are each designed to maximize the engagement impact and our Adobe Solution partnership since 2013 is an evidence of it. We deliver the complete cycle of AEM development services and solutions to adapt to your future business requirements. Our team of AEM specialists continuously innovates to formulate enterprise-wide AEM solutions that boost content value and fast-track its deliverability to the market. Techouts can be your technology partner to optimize your AEM-powered platform for the best business outcomes.</p>
+        <p>If you are looking to deliver high-quality, consistent customer experiences with AEM, reach out to us today at <a href="mailto:info@techouts.com">info@techouts.com.</a></p>
+            
+</body>
+</html>
+
+
+
